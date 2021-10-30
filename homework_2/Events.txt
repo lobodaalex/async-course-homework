@@ -1,0 +1,15 @@
+Бизнес события:
+1) Смена роли пользователя (Producer: auth service)
+2) Создание задачи (Producer: task tracker service, consumer: accounting service)
+3) Ассайн задачи (Producer: task tracker service, consumer: accounting service)
+4) Запрос аналитики (Producer: accounting service)
+5) Расчет баланса в конце рабочего дня (Producer: accounting service)
+6) Отправка уведомлений о балансе (Producer: accounting service)
+
+CUD события:
+Запросы на create/update/delete для:
+1) Пользователей и ролей (Producer: auth service, consumers: accounting service, task tracker service).
+Данные: username, email, role
+2) Задач  (Producer: task tracker service, consumer: accounting service)
+Данные: title, description, assigned_to (user_id)
+
